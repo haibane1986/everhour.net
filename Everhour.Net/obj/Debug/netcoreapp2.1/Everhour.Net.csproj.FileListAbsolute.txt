@@ -1,9 +1,0 @@
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/bin/Debug/netcoreapp2.1/Everhour.Net.deps.json
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/bin/Debug/netcoreapp2.1/Everhour.Net.dll
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/bin/Debug/netcoreapp2.1/Everhour.Net.pdb
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/obj/Debug/netcoreapp2.1/Everhour.Net.csprojAssemblyReference.cache
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/obj/Debug/netcoreapp2.1/Everhour.Net.csproj.CoreCompileInputs.cache
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/obj/Debug/netcoreapp2.1/Everhour.Net.AssemblyInfoInputs.cache
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/obj/Debug/netcoreapp2.1/Everhour.Net.AssemblyInfo.cs
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/obj/Debug/netcoreapp2.1/Everhour.Net.dll
-/Users/yoshiki/Desktop/workspace/morita-gitbucket.azurewebsites.net/gitbucket/git/morita/everhour.net/Everhour.Net/obj/Debug/netcoreapp2.1/Everhour.Net.pdb
