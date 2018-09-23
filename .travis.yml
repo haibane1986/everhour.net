@@ -9,6 +9,5 @@ env:
     - DOTNET_CLI_TELEMETRY_OPTOUT: 1
 script:
   - dotnet restore
-  - dotnet build ./Everhour.Net/
-  - cd ./Everhour.Net.Tests
-  - dotnet test
+  - dotnet build
+  - dotnet test ./Everhour.Net.Tests/Everhour.Net.Tests.csproj
