@@ -3,6 +3,7 @@ language: csharp
 dist: trusty
 dotnet: 2.1.300
 mono: none
+solution: Everhour.Net.sln
 env:
   global:
     - DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
@@ -10,4 +11,4 @@ env:
 script:
   - dotnet restore
   - dotnet build
-  - dotnet test
+  - dotnet test Everhour.Net.Tests/Everhour.Net.Tests.csproj
