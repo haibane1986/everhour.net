@@ -9,7 +9,6 @@ env:
     - DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
     - DOTNET_CLI_TELEMETRY_OPTOUT: 1
 script:
-  - cd Everhour.Net.Tests
   - dotnet restore
   - dotnet build
-  - dotnet test
+  - dotnet test Everhour.Net.Tests/Everhour.Net.Tests.csproj
