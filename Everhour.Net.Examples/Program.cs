@@ -12,7 +12,7 @@ namespace Everhour.Net.Examples
         static EverhourClient _client;
         static async Task Main(string[] args)
         {
-            var client = new EverhourClient("hoge-fuga-piyo-moge-noge");
+            _client = new EverhourClient("hoge-fuga-piyo-moge-noge");
             await MeAsync();
         }
 
