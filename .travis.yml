@@ -10,4 +10,5 @@ env:
 script:
   - dotnet restore
   - dotnet build ./Everhour.Net/
-  - dotnet test ./Everhour.Net.Tests/
+  - cd ./Everhour.Net.Tests
+  - dotnet test
