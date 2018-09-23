@@ -76,11 +76,11 @@ namespace Everhour.Net.Models
         /// <summary>
         /// Custom attributes from integration.
         /// </summary>
-        public IList<Attribute> Attributes { get; set; }
+        public Attribute Attributes { get; set; }
 
         /// <summary>
         /// Custom metrics from integration.
         /// </summary>
-        public IList<Metrics> Metrics { get; set; }
+        public Metrics Metrics { get; set; }
     }
 }

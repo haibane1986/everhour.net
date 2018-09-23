@@ -31,10 +31,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.All(res.Tasks, t => Assert.NotEqual(default(int), t.Estimate.Total));
             Assert.All(res.Tasks, t => Assert.Equal(Models.EstimateType.OVERALL, t.Estimate.Type));
             Assert.All(res.Tasks, t => Assert.NotNull(t.Estimate.Users));
-            Assert.All(res.Tasks, t => Assert.All(t.Attributes, a => Assert.Equal("Everhour", a.Client)));
-            Assert.All(res.Tasks, t => Assert.All(t.Attributes, a => Assert.Equal("hight",a.Priority)));
-            Assert.All(res.Tasks, t => Assert.All(t.Metrics, m => Assert.Equal(42, m.Efforts)));
-            Assert.All(res.Tasks, t => Assert.All(t.Metrics, m => Assert.Equal(199, m.Expenses)));
+            Assert.All(res.Tasks, t => Assert.Equal("Everhour", t.Attributes.Client));
+            Assert.All(res.Tasks, t => Assert.Equal("hight", t.Attributes.Priority));
+            Assert.All(res.Tasks, t => Assert.Equal(42, t.Metrics.Efforts));
+            Assert.All(res.Tasks, t => Assert.Equal(199, t.Metrics.Expenses));
         }
         
         [Fact]
@@ -59,10 +59,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.NotEqual(default(int), res.Task.Estimate.Total);
             Assert.Equal(Models.EstimateType.OVERALL, res.Task.Estimate.Type);
             Assert.NotNull(res.Task.Estimate.Users);
-            Assert.All(res.Task.Attributes, a => Assert.Equal("Everhour", a.Client));
-            Assert.All(res.Task.Attributes, a => Assert.Equal("hight",a.Priority));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(42, m.Efforts));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(199, m.Expenses));
+            Assert.Equal("Everhour", res.Task.Attributes.Client);
+            Assert.Equal("hight", res.Task.Attributes.Priority);
+            Assert.Equal(42, res.Task.Metrics.Efforts);
+            Assert.Equal(199, res.Task.Metrics.Expenses);
         }
 
         [Fact]
@@ -99,10 +99,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.NotEqual(default(int), res.Task.Estimate.Total);
             Assert.Equal(Models.EstimateType.OVERALL, res.Task.Estimate.Type);
             Assert.NotNull(res.Task.Estimate.Users);
-            Assert.All(res.Task.Attributes, a => Assert.Equal("Everhour", a.Client));
-            Assert.All(res.Task.Attributes, a => Assert.Equal("hight",a.Priority));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(42, m.Efforts));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(199, m.Expenses));
+            Assert.Equal("Everhour", res.Task.Attributes.Client);
+            Assert.Equal("hight", res.Task.Attributes.Priority);
+            Assert.Equal(42, res.Task.Metrics.Efforts);
+            Assert.Equal(199, res.Task.Metrics.Expenses);
         }
 
         [Fact]
@@ -128,10 +128,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.NotEqual(default(int), res.Task.Estimate.Total);
             Assert.Equal(Models.EstimateType.OVERALL, res.Task.Estimate.Type);
             Assert.NotNull(res.Task.Estimate.Users);
-            Assert.All(res.Task.Attributes, a => Assert.Equal("Everhour", a.Client));
-            Assert.All(res.Task.Attributes, a => Assert.Equal("hight",a.Priority));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(42, m.Efforts));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(199, m.Expenses));
+            Assert.Equal("Everhour", res.Task.Attributes.Client);
+            Assert.Equal("hight", res.Task.Attributes.Priority);
+            Assert.Equal(42, res.Task.Metrics.Efforts);
+            Assert.Equal(199, res.Task.Metrics.Expenses);
         }
 
         [Fact]
@@ -157,10 +157,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.NotEqual(default(int), res.Task.Estimate.Total);
             Assert.Equal(Models.EstimateType.OVERALL, res.Task.Estimate.Type);
             Assert.NotNull(res.Task.Estimate.Users);
-            Assert.All(res.Task.Attributes, a => Assert.Equal("Everhour", a.Client));
-            Assert.All(res.Task.Attributes, a => Assert.Equal("hight",a.Priority));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(42, m.Efforts));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(199, m.Expenses));
+            Assert.Equal("Everhour", res.Task.Attributes.Client);
+            Assert.Equal("hight", res.Task.Attributes.Priority);
+            Assert.Equal(42, res.Task.Metrics.Efforts);
+            Assert.Equal(199, res.Task.Metrics.Expenses);
         }
 
         [Fact]
@@ -197,10 +197,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.NotEqual(default(int), res.Task.Estimate.Total);
             Assert.Equal(Models.EstimateType.OVERALL, res.Task.Estimate.Type);
             Assert.NotNull(res.Task.Estimate.Users);
-            Assert.All(res.Task.Attributes, a => Assert.Equal("Everhour", a.Client));
-            Assert.All(res.Task.Attributes, a => Assert.Equal("hight",a.Priority));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(42, m.Efforts));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(199, m.Expenses));
+            Assert.Equal("Everhour", res.Task.Attributes.Client);
+            Assert.Equal("hight", res.Task.Attributes.Priority);
+            Assert.Equal(42, res.Task.Metrics.Efforts);
+            Assert.Equal(199, res.Task.Metrics.Expenses);
         }
 
         [Fact]
@@ -235,10 +235,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.NotEqual(default(int), res.Task.Estimate.Total);
             Assert.Equal(Models.EstimateType.OVERALL, res.Task.Estimate.Type);
             Assert.NotNull(res.Task.Estimate.Users);
-            Assert.All(res.Task.Attributes, a => Assert.Equal("Everhour", a.Client));
-            Assert.All(res.Task.Attributes, a => Assert.Equal("hight",a.Priority));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(42, m.Efforts));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(199, m.Expenses));
+            Assert.Equal("Everhour", res.Task.Attributes.Client);
+            Assert.Equal("hight", res.Task.Attributes.Priority);
+            Assert.Equal(42, res.Task.Metrics.Efforts);
+            Assert.Equal(199, res.Task.Metrics.Expenses);
         }
 
         [Fact]
@@ -274,10 +274,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.NotEqual(default(int), res.Task.Estimate.Total);
             Assert.Equal(Models.EstimateType.OVERALL, res.Task.Estimate.Type);
             Assert.NotNull(res.Task.Estimate.Users);
-            Assert.All(res.Task.Attributes, a => Assert.Equal("Everhour", a.Client));
-            Assert.All(res.Task.Attributes, a => Assert.Equal("hight",a.Priority));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(42, m.Efforts));
-            Assert.All(res.Task.Metrics, m => Assert.Equal(199, m.Expenses));
+            Assert.Equal("Everhour", res.Task.Attributes.Client);
+            Assert.Equal("hight", res.Task.Attributes.Priority);
+            Assert.Equal(42, res.Task.Metrics.Efforts);
+            Assert.Equal(199, res.Task.Metrics.Expenses);
         }
 
         [Fact]
