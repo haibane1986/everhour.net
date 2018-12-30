@@ -71,7 +71,7 @@ namespace Everhour.Net
                 throw new ArgumentException("Value cannot be null or empty.", nameof(resource));
 
             var request = Request(resource, HttpMethod.Post);
-            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore });
+            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore, DateFormatString = "yyyy-MM-dd HH:mm:ss" } );
             request.Content = new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json);
             return request;
         }
@@ -101,7 +101,7 @@ namespace Everhour.Net
                 throw new ArgumentException("Value cannot be null or empty.", nameof(subresource));
 
             var request =  Request(resource, resourceId, subresource, HttpMethod.Post);
-            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore });
+            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore, DateFormatString = "yyyy-MM-dd HH:mm:ss" });
             request.Content = new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json);
             return request;
         }
@@ -125,7 +125,7 @@ namespace Everhour.Net
                 throw new ArgumentException("Value cannot be null or empty.", nameof(resourceId));
 
             var request =  Request(resource, resourceId, HttpMethod.Put);
-            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore });
+            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore, DateFormatString = "yyyy-MM-dd HH:mm:ss" });
             request.Content = new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json);
             return request;
         }
@@ -155,7 +155,7 @@ namespace Everhour.Net
                 throw new ArgumentException("Value cannot be null or empty.", nameof(subresource));
         
             var request =  Request(resource, resourceId, subresource, HttpMethod.Put);
-            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore });
+            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore, DateFormatString = "yyyy-MM-dd HH:mm:ss" });
             request.Content = new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json);
             return request;
         }
@@ -173,7 +173,7 @@ namespace Everhour.Net
                 throw new ArgumentException("Value cannot be null or empty.", nameof(subresource));
         
             var request =  Request(resource, resourceId, subresource, HttpMethod.Delete);
-            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore });
+            var json = JsonConvert.SerializeObject(options, new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore, DateFormatString = "yyyy-MM-dd HH:mm:ss" });
             request.Content = new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json);
             return request;
         }

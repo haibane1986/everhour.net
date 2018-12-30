@@ -115,15 +115,26 @@ namespace Everhour.Net
         /// Time Recording / List Team Time Records
         /// </summary>
         public async Task<ListTeamTimeRecordsResponse> ListTeamTimeRecordsAsync() =>  await ExecuteAsync<ListTeamTimeRecordsResponse>(ListRequest(TEAM_TIME_PATH)).ConfigureAwait(false);
-        
+
         /// <summary>
         /// Time Recording / List Team Time Records
         /// </summary>
-        public async Task<ListTeamTimeRecordsResponse> ListTeamTimeRecordsAsync(ListTeamTimeRecordsRequest request)
+        /// <param name="date">Single date you want to fetch task time</param>
+        public async Task<ListTeamTimeRecordsResponse> ListTeamTimeRecordsAsync(DateTime date)
         {
-            if (request == null) return await ListTeamTimeRecordsAsync();
+            return await ExecuteAsync<ListTeamTimeRecordsResponse>(ListRequest(new UriBuilder() { Path = TEAM_TIME_PATH, Query = new ListTeamTimeRecordsRequest() { Date = date} .ToQuery() }.Uri.PathAndQuery)).ConfigureAwait(false);
+        }
 
-            return await ExecuteAsync<ListTeamTimeRecordsResponse>(ListRequest(new UriBuilder() { Path = TEAM_TIME_PATH, Query = request.ToQuery() }.Uri.PathAndQuery)).ConfigureAwait(false);
+        /// <summary>
+        /// Time Recording / List Team Time Records
+        /// </summary>
+        /// <param name="from">Date from you want to fetch task time</param>
+        /// <param name="to">Date to you want to fetch task time</param>
+        public async Task<ListTeamTimeRecordsResponse> ListTeamTimeRecordsAsync(DateTime from, DateTime to)
+        {
+            if (from > to) throw new ArgumentException("`From` must be before `To`.", nameof(from));
+
+            return await ExecuteAsync<ListTeamTimeRecordsResponse>(ListRequest(new UriBuilder() { Path = TEAM_TIME_PATH, Query = new ListTeamTimeRecordsRequest() { From = from, To = to} .ToQuery() }.Uri.PathAndQuery)).ConfigureAwait(false);
         }
         
         /// <summary>

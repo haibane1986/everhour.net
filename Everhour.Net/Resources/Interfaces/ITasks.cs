@@ -15,7 +15,7 @@ namespace Everhour.Net
         Task<UpdateTaskResponse> UpdateTaskAsync(string taskId, string name, int section);
         Task<bool> DeleteTaskAsync(string taskId);
         Task<SetTaskEstimateResponse> SetTaskEstimateAsync(SetTaskEstimateRequest request);
-        Task<SetTaskEstimateResponse> SetTaskEstimateAsync(string taskId, int total, EstimateType type);
+        Task<SetTaskEstimateResponse> SetTaskEstimateAsync(string taskId, EstimateType type, int total, IList<UserWithTaskEstimate> users);
         Task<bool> DeleteTaskEstimateAsync(string taskId);
     }
 }

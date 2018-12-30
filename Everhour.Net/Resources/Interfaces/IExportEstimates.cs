@@ -7,7 +7,7 @@ namespace Everhour.Net
 {
     internal partial interface IEverhourClient
     {
-        Task<ExportAllTeamEstimatesResponse> ExportAllTeamEstimatesAsync(DateTime dueFrom, DateTime dueTo);
+        Task<ExportAllTeamEstimatesResponse> ExportAllTeamEstimatesAsync();
 
         Task<ExportAllTeamEstimatesResponse> ExportAllTeamEstimatesAsync(ExportAllTeamEstimatesRequest request);
     }

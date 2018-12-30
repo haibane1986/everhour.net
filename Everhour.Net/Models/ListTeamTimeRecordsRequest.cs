@@ -3,7 +3,7 @@ using System.Web;
 
 namespace Everhour.Net.Models
 {
-    public class ListTeamTimeRecordsRequest: EverhourRequest
+    internal class ListTeamTimeRecordsRequest: EverhourRequest
     {
         /// <summary>
         /// Date from you want to fetch task time (format YYYY-MM-DD).

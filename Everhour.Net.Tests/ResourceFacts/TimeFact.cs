@@ -11,7 +11,7 @@ namespace Everhour.Net.Tests.ResourceFacts
     public class Time : FactBase
     {
         [Fact]
-        public async Task ExportTeamTimeAsync_ReturnsTeamTime()
+        public async Task ExportAllTeamTimeAsync_ReturnsTeamTime()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.EXPORT_TIME)));

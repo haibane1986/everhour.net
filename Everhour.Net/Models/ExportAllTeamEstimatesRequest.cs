@@ -4,19 +4,13 @@ using System.Web;
 namespace Everhour.Net.Models {
     public class ExportAllTeamEstimatesRequest : EverhourRequest 
     {
-        public ExportAllTeamEstimatesRequest(DateTime dueFrom, DateTime dueTo) 
-        {
-            DueFrom = dueFrom;
-            DueTo = dueTo;
-        }
-
         /// <summary>
         /// Task due date from you what to fetch estimates.
         /// <example>
         /// 2018-01-01
         /// </example>
         /// </summary>
-        public DateTime DueFrom { get; private set; }
+        public DateTime? DueFrom { get; set; }
 
         /// <summary>
         /// Task due date to you what to fetch estimate.
@@ -24,7 +18,7 @@ namespace Everhour.Net.Models {
         /// 2018-01-31
         /// </example>
         /// </summary>
-        public DateTime DueTo { get; private set; }
+        public DateTime? DueTo { get; set; }
 
         /// <summary>
         /// Task status (e.g. open or completed).
@@ -37,8 +31,8 @@ namespace Everhour.Net.Models {
         public override string ToQuery() 
         {
             var query = HttpUtility.ParseQueryString(string.Empty);
-            query["dueFrom"] = DueFrom.ToString("yyyy-MM-dd");
-            query["dueTo"] = DueTo.ToString("yyyy-MM-dd");
+            if (DueFrom.HasValue) query["dueFrom"] = DueFrom.Value.ToString("yyyy-MM-dd");
+            if (DueTo.HasValue) query["dueTo"] = DueTo.Value.ToString("yyyy-MM-dd");
             if (Status != null) query["status"] = Status.Name;
             return query.ToString();
         }

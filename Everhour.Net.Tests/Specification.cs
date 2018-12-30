@@ -478,14 +478,14 @@ namespace Everhour.Net.Tests
         ""1543"": 3600
       }
     },
-    ""attributes"": {
+    ""attributes"": [{
       ""Client"": ""Everhour"",
       ""Priority"": ""hight""
-    },
-    ""metrics"": {
+    }],
+    ""metrics"": [{
       ""efforts"": 42,
       ""expenses"": 199
-    }
+    }]
   }
 ]
         ";
@@ -523,14 +523,14 @@ namespace Everhour.Net.Tests
       ""1543"": 3600
     }
   },
-  ""attributes"": {
+  ""attributes"": [{
     ""Client"": ""Everhour"",
     ""Priority"": ""hight""
-  },
-  ""metrics"": {
+  }],
+  ""metrics"": [{
     ""efforts"": 42,
     ""expenses"": 199
-  }
+  }]
 }
         ";
         #endregion
@@ -567,14 +567,14 @@ namespace Everhour.Net.Tests
       ""1543"": 3600
     }
   },
-  ""attributes"": {
+  ""attributes"": [{
     ""Client"": ""Everhour"",
     ""Priority"": ""hight""
-  },
-  ""metrics"": {
+  }],
+  ""metrics"": [{
     ""efforts"": 42,
     ""expenses"": 199
-  }
+  }]
 }
         ";
         #endregion
@@ -611,14 +611,14 @@ namespace Everhour.Net.Tests
       ""1543"": 3600
     }
   },
-  ""attributes"": {
+  ""attributes"": [{
     ""Client"": ""Everhour"",
     ""Priority"": ""hight""
-  },
-  ""metrics"": {
+  }],
+  ""metrics"": [{
     ""efforts"": 42,
     ""expenses"": 199
-  }
+  }]
 }
         ";
         #endregion
@@ -626,43 +626,8 @@ namespace Everhour.Net.Tests
         #region SET_TASK_ESTIMATE
         public static string SET_TASK_ESTIMATE = @"
 {
-  ""id"": ""ev:9876543210"",
-  ""name"": ""Task Name"",
-  ""projects"": [
-    ""ev:1234567890""
-  ],
-  ""section"": 1234,
-  ""labels"": [
-    ""high"",
-    ""bug""
-  ],
-  ""position"": 1,
-  ""description"": ""description"",
-  ""dueAt"": ""2018-03-05 16:00:00"",
-  ""status"": ""open"",
-  ""time"": {
-    ""total"": 7200,
-    ""users"": {
-      ""1304"": 3600,
-      ""1543"": 3600
-    }
-  },
-  ""estimate"": {
-    ""total"": 7200,
-    ""type"": ""overall"",
-    ""users"": {
-      ""1304"": 3600,
-      ""1543"": 3600
-    }
-  },
-  ""attributes"": {
-    ""Client"": ""Everhour"",
-    ""Priority"": ""hight""
-  },
-  ""metrics"": {
-    ""efforts"": 42,
-    ""expenses"": 199
-  }
+  ""type"":""overall"",
+  ""total"":7200
 }
         ";
         #endregion
@@ -739,14 +704,14 @@ namespace Everhour.Net.Tests
         ""1543"": 3600
       }
     },
-    ""attributes"": {
+    ""attributes"": [{
       ""Client"": ""Everhour"",
       ""Priority"": ""hight""
-    },
-    ""metrics"": {
+    }],
+    ""metrics"": [{
       ""efforts"": 42,
       ""expenses"": 199
-    }
+    }]
   },
   ""isLocked"": true,
   ""isInvoiced"": true,
@@ -792,14 +757,14 @@ namespace Everhour.Net.Tests
         ""1543"": 3600
       }
     },
-    ""attributes"": {
+    ""attributes"": [{
       ""Client"": ""Everhour"",
       ""Priority"": ""hight""
-    },
-    ""metrics"": {
+    }],
+    ""metrics"": [{
       ""efforts"": 42,
       ""expenses"": 199
-    }
+    }]
   },
   ""isLocked"": true,
   ""isInvoiced"": true,
@@ -845,14 +810,14 @@ namespace Everhour.Net.Tests
         ""1543"": 3600
       }
     },
-    ""attributes"": {
+    ""attributes"": [{
       ""Client"": ""Everhour"",
       ""Priority"": ""hight""
-    },
-    ""metrics"": {
+    }],
+    ""metrics"": [{
       ""efforts"": 42,
       ""expenses"": 199
-    }
+    }]
   },
   ""isLocked"": true,
   ""isInvoiced"": true,
@@ -899,14 +864,14 @@ namespace Everhour.Net.Tests
           ""1543"": 3600
         }
       },
-      ""attributes"": {
+      ""attributes"": [{
         ""Client"": ""Everhour"",
         ""Priority"": ""hight""
-      },
-      ""metrics"": {
+      }],
+      ""metrics"": [{
         ""efforts"": 42,
         ""expenses"": 199
-      }
+      }]
     },
     ""isLocked"": true,
     ""isInvoiced"": true,
@@ -954,14 +919,14 @@ namespace Everhour.Net.Tests
           ""1543"": 3600
         }
       },
-      ""attributes"": {
+      ""attributes"": [{
         ""Client"": ""Everhour"",
         ""Priority"": ""hight""
-      },
-      ""metrics"": {
+      }],
+      ""metrics"": [{
         ""efforts"": 42,
         ""expenses"": 199
-      }
+      }]
     },
     ""isLocked"": true,
     ""isInvoiced"": true,
@@ -1019,14 +984,14 @@ namespace Everhour.Net.Tests
           ""1543"": 3600
         }
       },
-      ""attributes"": {
+      ""attributes"": [{
         ""Client"": ""Everhour"",
         ""Priority"": ""hight""
-      },
-      ""metrics"": {
+      }],
+      ""metrics"": [{
         ""efforts"": 42,
         ""expenses"": 199
-      }
+      }]
     },
     ""isLocked"": true,
     ""isInvoiced"": true,
@@ -1075,14 +1040,14 @@ namespace Everhour.Net.Tests
         ""1543"": 3600
       }
     },
-    ""attributes"": {
+    ""attributes"": [{
       ""Client"": ""Everhour"",
       ""Priority"": ""hight""
-    },
-    ""metrics"": {
+    }],
+    ""metrics"": [{
       ""efforts"": 42,
       ""expenses"": 199
-    }
+    }]
   },
   ""user"": {
     ""id"": 1304,
@@ -1134,14 +1099,14 @@ namespace Everhour.Net.Tests
         ""1543"": 3600
       }
     },
-    ""attributes"": {
+    ""attributes"": [{
       ""Client"": ""Everhour"",
       ""Priority"": ""hight""
-    },
-    ""metrics"": {
+    }],
+    ""metrics"": [{
       ""efforts"": 42,
       ""expenses"": 199
-    }
+    }]
   },
   ""user"": {
     ""id"": 1304,
@@ -1193,14 +1158,14 @@ namespace Everhour.Net.Tests
         ""1543"": 3600
       }
     },
-    ""attributes"": {
+    ""attributes"": [{
       ""Client"": ""Everhour"",
       ""Priority"": ""hight""
-    },
-    ""metrics"": {
+    }],
+    ""metrics"": [{
       ""efforts"": 42,
       ""expenses"": 199
-    }
+    }]
   },
   ""user"": {
     ""id"": 1304,
@@ -1253,14 +1218,14 @@ namespace Everhour.Net.Tests
           ""1543"": 3600
         }
       },
-      ""attributes"": {
+      ""attributes"": [{
         ""Client"": ""Everhour"",
         ""Priority"": ""hight""
-      },
-      ""metrics"": {
+      }],
+      ""metrics"": [{
         ""efforts"": 42,
         ""expenses"": 199
-      }
+      }]
     },
     ""user"": {
       ""id"": 1304,

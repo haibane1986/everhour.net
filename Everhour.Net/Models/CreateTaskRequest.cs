@@ -49,7 +49,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         [JsonProperty("position")]
-        public int Position { get; set; }
+        public int? Position { get; set; }
 
         [JsonProperty("description")]
         public string Description { get; set; }
@@ -61,7 +61,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         [JsonProperty("dueAt")]
-        public DateTime DueAt { get; set; }
+        public DateTime? DueAt { get; set; }
 
         /// <summary>
         /// <example>

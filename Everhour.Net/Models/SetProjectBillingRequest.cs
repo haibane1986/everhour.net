@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Everhour.Net.Models
 {
-    public class SetProjectBillingRequest: EverhourRequest
+    internal class SetProjectBillingRequest: EverhourRequest
     {
         /// <summary>
         /// Project ID.

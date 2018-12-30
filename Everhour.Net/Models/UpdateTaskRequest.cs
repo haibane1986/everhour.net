@@ -28,7 +28,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         [JsonProperty("section", Required = Required.Always)]
-        public int Section { get; set; }
+        public int? Section { get; set; }
 
         /// <summary>
         /// <example>
@@ -46,7 +46,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         [JsonProperty("position")]
-        public int Position { get; set; }
+        public int? Position { get; set; }
 
         [JsonProperty("description")]
         public string Description { get; set; }
@@ -58,7 +58,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         [JsonProperty("dueAt")]
-        public DateTime DueAt { get; set; }
+        public DateTime? DueAt { get; set; }
 
         /// <summary>
         /// <example>

@@ -16,7 +16,8 @@ namespace Everhour.Net
         Task<ListUserTimeRecordsResponse> ListUserTimeRecordsAsync(int userId, int limit);
         Task<ListUserTimeRecordsResponse> ListUserTimeRecordsAsync(ListUserTimeRecordsRequest request);
         Task<ListTeamTimeRecordsResponse> ListTeamTimeRecordsAsync();
-        Task<ListTeamTimeRecordsResponse> ListTeamTimeRecordsAsync(ListTeamTimeRecordsRequest request);
+        Task<ListTeamTimeRecordsResponse> ListTeamTimeRecordsAsync(DateTime date);
+        Task<ListTeamTimeRecordsResponse> ListTeamTimeRecordsAsync(DateTime from, DateTime to);
         Task<ListTaskTimeRecordsResponse> ListTaskTimeRecordsAsync(string taskId);
     }
 }

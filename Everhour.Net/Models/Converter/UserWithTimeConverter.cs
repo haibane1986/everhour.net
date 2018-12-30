@@ -7,11 +7,6 @@ namespace Everhour.Net.Models
 {
     public class UserWithTimeConverter : BaseJsonConverter<List<UserWithTime>>
     {
-        public override bool CanWrite
-        {
-            get { return false; }
-        }
-
         protected override List<UserWithTime> ReadInternal(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             if (reader.TokenType != JsonToken.StartObject) return null;
@@ -25,6 +20,21 @@ namespace Everhour.Net.Models
                 users.Add(new UserWithTime() { Id = id, Time = time });
             }
             return users;
+        }
+
+        protected override void WriteInternal(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            var t = JToken.FromObject(value);
+            if (t.Type != JTokenType.Array) return;
+            if (!(value is List<UserWithTime>)) return;
+            
+            var users = (List<UserWithTime>)value;
+            var o = new JObject();
+            foreach (var user in users)
+            {
+                o.Add(new JProperty(user.Id.ToString(), new JValue(user.Time)));
+            }
+            o.WriteTo(writer);
         }
     }
 }

@@ -7,11 +7,6 @@ namespace Everhour.Net.Models
 {
     public class UserWithTaskEstimateConverter : BaseJsonConverter<List<UserWithTaskEstimate>>
     {
-        public override bool CanWrite
-        {
-            get { return false; }
-        }
-
         protected override List<UserWithTaskEstimate> ReadInternal(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             if (reader.TokenType != JsonToken.StartObject) return null;
@@ -25,6 +20,21 @@ namespace Everhour.Net.Models
                 users.Add(new UserWithTaskEstimate() { Id = id, TaskEstimate = taskEstimate });
             }
             return users;
+        }
+
+        protected override void WriteInternal(JsonWriter writer, object value, JsonSerializer serializer)
+        {
+            var t = JToken.FromObject(value);
+            if (t.Type != JTokenType.Array) return;
+            if (!(value is List<UserWithTaskEstimate>)) return;
+            
+            var users = (List<UserWithTaskEstimate>)value;
+            var o = new JObject();
+            foreach (var user in users)
+            {
+                o.Add(new JProperty(user.Id.ToString(), new JValue(user.TaskEstimate)));
+            }
+            o.WriteTo(writer);
         }
     }
 }
