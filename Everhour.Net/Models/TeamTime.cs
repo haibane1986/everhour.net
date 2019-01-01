@@ -1,5 +1,6 @@
 
 using System;
+using Newtonsoft.Json;
 
 namespace Everhour.Net.Models
 {
@@ -12,6 +13,15 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         public int Time { get; set; }
+
+        /// <summary>
+        /// Billable time
+        /// <example>
+        /// 3600
+        /// </example>
+        /// </summary>
+        [JsonProperty("billable_time")]
+        public int BillableTime { get; set; }
 
         /// <summary>
         /// Will appear only if 'date' passed to fields parameter.
