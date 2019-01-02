@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Everhour.Net.Models
 {
-    public class SetTaskEstimateRequest: EverhourRequest
+    internal class SetTaskEstimateRequest: EverhourRequest
     {
         /// <summary>
         /// Task ID.
@@ -18,7 +18,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         [JsonProperty("total", Required = Required.Always)]
-        public int Total { get; set; }
+        public int? Total { get; set; }
 
         /// <summary>
         /// <example>

@@ -11,7 +11,7 @@ namespace Everhour.Net.Models
         /// 7200
         /// </example>
         /// </summary>
-        public int Total { get; set; }
+        public int? Total { get; set; }
 
         /// <summary>
         /// <example>

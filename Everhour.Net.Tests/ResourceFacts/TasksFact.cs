@@ -214,11 +214,11 @@ namespace Everhour.Net.Tests.ResourceFacts
         }
 
         [Fact]
-        public async Task SetTaskEstimateAsync_ReturnsTask()
+        public async Task SetTaskEstimateAsyncByOverAll_ReturnsTask()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.SET_TASK_ESTIMATE)));
-            var res = await MockApi.Object.SetTaskEstimateAsync("ev:9876543210",  Models.EstimateType.OVERALL, 7200, null);
+            var res = await MockApi.Object.SetTaskEstimateAsyncByOverAll("ev:9876543210",  7200);
 
             Assert.NotNull(res);
             Assert.NotNull(res.Estimate.Total);
@@ -232,17 +232,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.SET_TASK_ESTIMATE)));
 
-            var req = new Models.SetTaskEstimateRequest()
+            var res = await MockApi.Object.SetTaskEstimateAsyncByUsers("ev:9876543210", new List<Models.UserWithTaskEstimate>() 
             {
-                Id = "ev:9876543210",
-                Total = 7200,
-                Type = Models.EstimateType.OVERALL,
-                Users = new List<Models.UserWithTaskEstimate>() 
-                {
-                    new Models.UserWithTaskEstimate() { Id = 1234, TaskEstimate = 3600 }
-                }
-            };
-            var res = await MockApi.Object.SetTaskEstimateAsync(req);
+                new Models.UserWithTaskEstimate() { Id = 1234, TaskEstimate = 3600 }
+            });
 
             Assert.NotNull(res);
             Assert.NotNull(res.Estimate.Total);

@@ -105,27 +105,28 @@ namespace Everhour.Net
         /// <summary>
         /// Tasks / Set Task Estimate
         /// </summary>
-        public async Task<SetTaskEstimateResponse> SetTaskEstimateAsync(SetTaskEstimateRequest request)
+        /// <param name="taskId">Task ID</param>
+        /// <param name="total">Total task estimate in seconds</param>
+        public async Task<SetTaskEstimateResponse> SetTaskEstimateAsyncByOverAll(string taskId, int total)
         {
-            if (request == null) throw new ArgumentNullException("Value cannot be null.", nameof(request));
-            if (string.IsNullOrEmpty(request.Id)) throw new ArgumentException("Value cannot be null.", nameof(request.Id));
-            if (request.Type == null) throw new ArgumentNullException("Value cannot be null or empty.", nameof(request.Type));
+            if (string.IsNullOrEmpty(taskId)) throw new ArgumentException("Value cannot be null.", nameof(taskId));
+            if (total < 0)  throw new ArgumentOutOfRangeException("Value must be positive and non zero.", nameof(total));
 
-            return await ExecuteAsync<SetTaskEstimateResponse>(UpdateRequest<SetTaskEstimateRequest>(TASKS_PATH, request.Id, "estimate", request)).ConfigureAwait(false);
+            return await ExecuteAsync<SetTaskEstimateResponse>(UpdateRequest<SetTaskEstimateRequest>(TASKS_PATH, taskId, "estimate", new SetTaskEstimateRequest() { Id = taskId, Type = EstimateType.OVERALL, Total = total })).ConfigureAwait(false);
         }
 
         /// <summary>
         /// Tasks / Set Task Estimate
         /// </summary>
         /// <param name="taskId">Task ID</param>
-        /// <param name="total">Total task estimate in seconds</param>
-        /// <param name="type">Estimate Type</param>
-        public async Task<SetTaskEstimateResponse> SetTaskEstimateAsync(string taskId, EstimateType type, int total, IList<UserWithTaskEstimate> users)
+        /// <param name="users">Task estimate for user ID in seconds</param>
+        public async Task<SetTaskEstimateResponse> SetTaskEstimateAsyncByUsers(string taskId, IList<UserWithTaskEstimate> users)
         {
             if (string.IsNullOrEmpty(taskId)) throw new ArgumentException("Value cannot be null.", nameof(taskId));
-            if (type == null) throw new ArgumentNullException("Value cannot be null or empty.", nameof(type));
+            if (users == null) throw new ArgumentNullException("Value cannot be null or empty.", nameof(users));
+            if (users.Count == 0) throw new ArgumentException("Value cannot be empty.", nameof(users));
 
-            return await ExecuteAsync<SetTaskEstimateResponse>(UpdateRequest<SetTaskEstimateRequest>(TASKS_PATH, taskId, "estimate", new SetTaskEstimateRequest() { Id = taskId, Total = total, Type = type, Users = users })).ConfigureAwait(false);
+            return await ExecuteAsync<SetTaskEstimateResponse>(UpdateRequest<SetTaskEstimateRequest>(TASKS_PATH, taskId, "estimate", new SetTaskEstimateRequest() { Id = taskId, Type = EstimateType.USERS, Users = users })).ConfigureAwait(false);
         }
 
         /// <summary>
