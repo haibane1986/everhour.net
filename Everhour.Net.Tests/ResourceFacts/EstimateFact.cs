@@ -16,7 +16,7 @@ namespace Everhour.Net.Tests.ResourceFacts
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.EXPORT_ESITIMATES)));
 
-            var res = await MockApi.Object.ExportAllTeamEstimatesAsync(DateTime.UtcNow, DateTime.UtcNow.AddDays(1));
+            var res = await MockApi.Object.ExportAllTeamEstimatesAsync();
 
             Assert.NotNull(res);
             Assert.All(res.TeamEstimates, e => Assert.NotEqual(default(int), e.Time.Total));
