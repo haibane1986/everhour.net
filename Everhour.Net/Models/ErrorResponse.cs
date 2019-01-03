@@ -21,5 +21,14 @@ namespace Everhour.Net.Models
         /// </summary>
         [JsonProperty("message")]
         public string Message { get; set; }
+
+        /// <summary>
+        /// Error Details.
+        /// <example>
+        /// {"from":"This value should not be blank.","to":"This value should not be blank."}
+        /// </example>
+        /// </summary>
+        [JsonProperty ("errors")]
+        public object Errors { get; set; }
     }
 }
