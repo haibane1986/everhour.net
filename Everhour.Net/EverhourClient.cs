@@ -38,6 +38,7 @@ namespace Everhour.Net
             var response = await ExecuteAsync(request).ConfigureAwait(false);
             var t = new T().FromJson(await response.Content.ReadAsStringAsync().ConfigureAwait(false));
             t.StatusCode = (int)response.StatusCode;
+            t.Raw = await response.Content?.ReadAsStringAsync();
             return t;
         }
 
