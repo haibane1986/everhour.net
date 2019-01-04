@@ -54,6 +54,7 @@ namespace Everhour.Net.Tests
 [
   {
     ""time"": 7200,
+    ""billable_time"":3600,
     ""date"": ""2018-03-20"",
     ""user"": {
       ""id"": 1304,
