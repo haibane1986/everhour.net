@@ -10,7 +10,7 @@ namespace Everhour.Net.Models {
         public string AvatarUrl { get; set; }
         public string Email { get; set; }
         public string Status { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public bool Shared { get; set; }
         public List<object> TaxRates { get; set; }
     }

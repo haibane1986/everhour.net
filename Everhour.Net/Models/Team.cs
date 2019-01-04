@@ -6,7 +6,7 @@ namespace Everhour.Net.Models {
         public List<string> Workdays { get; set; }
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public string LockTimePeriod { get; set; }
         public int LockTimeAfter { get; set; }
         public int BeginningOfWeek { get; set; }

@@ -17,8 +17,8 @@ namespace Everhour.Net.Models {
         public string InstallStep { get; set; }
         public string SignupType { get; set; }
         public string Country { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime PrivacyAcceptedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+        public DateTime? PrivacyAcceptedAt { get; set; }
         public string ApiKey { get; set; }
         public Team Team { get; set; }
         public List<Group> Groups { get; set; }
@@ -35,7 +35,7 @@ namespace Everhour.Net.Models {
         public int TimeRounding { get; set; }
         public string StartPage { get; set; }
         public string ActivityMode { get; set; }
-        public DateTime ExtensionUsedAt { get; set; }
+        public DateTime? ExtensionUsedAt { get; set; }
         public bool WelcomeSeen { get; set; }
         public bool AccessToResourcePlanner { get; set; }
         public int Timezone { get; set; }
