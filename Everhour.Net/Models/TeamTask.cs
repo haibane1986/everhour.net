@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Everhour.Net.Models
@@ -56,5 +57,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         public DateTime? DueAt { get; set; }
+
+        public List<string> Labels { get; set; }
     }
 }

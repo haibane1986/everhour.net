@@ -1,9 +1,7 @@
 using System;
 
-namespace Everhour.Net.Models
-{
-    public class TimeRecord
-    {
+namespace Everhour.Net.Models {
+    public class TaskTime {
         /// <summary>
         /// Time record ID.
         /// <example>

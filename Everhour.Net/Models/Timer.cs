@@ -60,5 +60,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         public User User { get; set; }
+
+        public TaskTime TaskTime { get; set; }
     }
 }

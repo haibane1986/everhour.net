@@ -51,5 +51,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         public DateTime? CreatedAt { get; set; }
+
+        public string Action { get; set; }
     }
 }
