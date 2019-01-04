@@ -5,7 +5,7 @@ namespace Everhour.Net.Models
     public class Client
     {
         /// <summary>
-        /// Identifier of the user.
+        /// Identifier of the client.
         /// <example>
         /// 4567
         /// </example>

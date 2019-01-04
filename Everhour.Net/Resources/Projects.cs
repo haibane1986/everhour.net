@@ -82,6 +82,7 @@ namespace Everhour.Net
         /// <summary>
         /// Projects / Delete Project
         /// </summary>
+        /// <param name="projectId">Project ID</param>
         public async Task<bool> DeleteProjectAsync(string projectId)
         {
             if (string.IsNullOrEmpty(projectId)) throw new ArgumentException("Value cannot be null or empty.", nameof(projectId));
