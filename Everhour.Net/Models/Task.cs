@@ -2,10 +2,8 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Everhour.Net.Models
-{
-    public class Task
-    {
+namespace Everhour.Net.Models {
+    public class Task {
         /// <summary>
         /// <example>
         /// ev:1234567890
@@ -66,7 +64,7 @@ namespace Everhour.Net.Models
         /// open or closed
         /// </example>
         /// </summary>
-        [JsonConverter(typeof(EnumerationConverter<TaskStatus>))]
+        [JsonConverter (typeof (EnumerationConverter<TaskStatus>))]
         public TaskStatus Status { get; set; }
 
         public Time Time { get; set; }
@@ -76,11 +74,17 @@ namespace Everhour.Net.Models
         /// <summary>
         /// Custom attributes from integration.
         /// </summary>
-        public Attribute Attributes { get; set; }
+        public IList<Attribute> Attributes { get; set; }
 
         /// <summary>
         /// Custom metrics from integration.
         /// </summary>
-        public Metrics Metrics { get; set; }
+        public IList<Metrics> Metrics { get; set; }
+
+        public string Iteration { get; set; }
+
+        public DateTime? CreatedAt { get; set; }
+
+        public string Color { get; set; }
     }
 }

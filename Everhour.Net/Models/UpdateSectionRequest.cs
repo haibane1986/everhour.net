@@ -5,7 +5,7 @@ namespace Everhour.Net.Models
     public class UpdateSectionRequest: EverhourRequest
     {
         /// <summary>
-        /// Project ID.
+        /// Section ID.
         /// </summary>
         [JsonProperty("id", Required = Required.Always)]
         public int Id { get; set; }
@@ -25,7 +25,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         [JsonProperty("position")]
-        public int Position { get; set; }
+        public int? Position { get; set; }
 
         /// <summary>
         /// <example>

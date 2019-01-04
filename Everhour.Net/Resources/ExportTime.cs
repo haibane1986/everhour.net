@@ -15,7 +15,7 @@ namespace Everhour.Net
         /// </summary>
         /// <param name="from">Date from you what to fetch reported time.</param>
         /// <param name="to">Date to you what to fetch reported time.</param>
-        public async Task<ExportAllTeamTimeResponse> ExportAllTeamTimeAsync(DateTime from, DateTime to) =>  await ExecuteAsync<ExportAllTeamTimeResponse>(Request(new UriBuilder() { Path = TEAM_TIME_EXPORT_PATH, Query = new ExportAllTeamTimeRequest(from, to).ToQuery() }.Uri.PathAndQuery)).ConfigureAwait(false);
+        public async Task<ExportAllTeamTimeResponse> ExportAllTeamTimeAsync(DateTime from, DateTime to) =>  await ExecuteAsync<ExportAllTeamTimeResponse>(Request(new UriBuilder() { Path = TEAM_TIME_EXPORT_PATH, Query = new ExportAllTeamTimeRequest() { From = from, To = to }.ToQuery() }.Uri.PathAndQuery)).ConfigureAwait(false);
 
         /// <summary>
         /// Export Time / Export All Team Time

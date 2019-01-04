@@ -12,7 +12,7 @@ namespace Everhour.Net.Examples
         static EverhourClient _client;
         static async Task Main(string[] args)
         {
-            _client = new EverhourClient("hoge-fuga-piyo-moge-noge");
+            _client = new EverhourClient("API_TOKEN_HERE");
             await MeAsync();
         }
 
@@ -25,6 +25,7 @@ namespace Everhour.Net.Examples
             Console.WriteLine(res.Me.Id);
             Console.WriteLine(res.Me.Role.Name);
             Console.WriteLine(res.Me.Status.Name);
+            Console.WriteLine(res.Raw);
             Console.WriteLine(res.StatusCode);
         }
     }

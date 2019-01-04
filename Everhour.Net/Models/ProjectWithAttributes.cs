@@ -1,11 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Everhour.Net.Models
-{
-    public class ProjectWithAttributes: Project
-    {
-        [JsonProperty("workspaceName")]
+namespace Everhour.Net.Models {
+    public class ProjectWithAttributes : Project {
+        [JsonProperty ("workspaceName")]
         private string WorkspaceName { set { Workspace = value; } }
 
         /// <summary>
@@ -21,7 +20,7 @@ namespace Everhour.Net.Models
         /// boad or list
         /// </example>
         /// </summary>
-        [JsonConverter(typeof(EnumerationConverter<ProjectType>))]
+        [JsonConverter (typeof (EnumerationConverter<ProjectType>))]
         public ProjectType Type { get; set; }
 
         /// <summary>   
@@ -45,5 +44,23 @@ namespace Everhour.Net.Models
         /// Project Billing.
         /// </summary>
         public Billing Billing { get; set; }
+
+        public bool? CanSyncTasks { get; set; }
+
+        public DateTime? CreatedAt { get; set; }
+
+        public bool? Foreign { get; set; }
+
+        public bool? HasWebhook { get; set; }
+
+        public string Status { get; set; }
+
+        public int? Client { get; set; }
+
+        public bool? EnableResourcePlanner { get; set; }
+
+        public bool? ChangeProtected { get; set; }
+
+        public bool? Editable { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Everhour.Net.Tests.ResourceFacts
     public class ProjectsFact : FactBase
     {
         [Fact]
-        public async Task ListAllCProjectsAsync_ReturnsProjects()
+        public async Task ListAllProjectsAsync_ReturnsProjects()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.LIST_ALL_PROJECTS)));
@@ -68,7 +68,7 @@ namespace Everhour.Net.Tests.ResourceFacts
 
             var req = new Models.CreateProjectRequest()
             {
-                Name = "Test Client",
+                Name = "Test Project",
                 Type = Models.ProjectType.BOARD,
                 Users = new List<int>() { 1, 2, 3}
             };
@@ -222,11 +222,11 @@ namespace Everhour.Net.Tests.ResourceFacts
         }
 
         [Fact]
-        public async Task SetProjectBillingAsync_ReturnsProject()
+        public async Task SetProjectBillingByFlatRateAsync_ReturnsProject()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.SET_PROJECT_BILLING)));
-            var res = await MockApi.Object.SetProjectBillingAsync("as:1234567890", Models.BillingType.FLAT_RATE);
+            var res = await MockApi.Object.SetProjectBillingByFlatRateAsync("as:1234567890", 10000);
 
             Assert.NotNull(res);
             Assert.NotNull(res.Project.Id);
@@ -247,23 +247,16 @@ namespace Everhour.Net.Tests.ResourceFacts
         }
 
         [Fact]
-        public async Task SetProjectBillingAsyncWithRequest_ReturnsProject()
+        public async Task SetProjectBillingByUserRateAsync_ReturnsProject()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
-                .Returns(Task.FromResult(GenerateMockResponse(Specification.UPDATE_PROJECT)));
-                
-            var req = new Models.SetProjectBillingRequest()
+                .Returns(Task.FromResult(GenerateMockResponse(Specification.SET_PROJECT_BILLING)));
+            var users = new List<Models.UserWithRate>() 
             {
-                Id = "as:1234567890",
-                Type = Models.BillingType.FLAT_RATE,
-                Rate = 10000,
-                Users = new List<Models.UserWithRate>() 
-                {
-                    new Models.UserWithRate() { Id = 1234, Rate = 10000 },
-                    new Models.UserWithRate() { Id = 5678, Rate = 10000 }
-                }
+                new Models.UserWithRate() { Id = 1234, Rate = 10000 },
+                new Models.UserWithRate() { Id = 5678, Rate = 10000 }
             };
-            var res = await MockApi.Object.SetProjectBillingAsync(req);
+            var res = await MockApi.Object.SetProjectBillingByUserRateAsync("as:1234567890", users);
 
             Assert.NotNull(res);
             Assert.NotNull(res.Project.Id);

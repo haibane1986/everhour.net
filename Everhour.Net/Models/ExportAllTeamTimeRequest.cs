@@ -6,19 +6,13 @@ namespace Everhour.Net.Models
 {
     public class ExportAllTeamTimeRequest: EverhourRequest
     {
-        public ExportAllTeamTimeRequest(DateTime from, DateTime to) 
-        {
-            From = from;
-            To = to;
-        }
-
         /// <summary>
         /// Date from you what to fetch reported time.
         /// <example>
         /// 2018-01-01
         /// </example>
         /// </summary>
-        public DateTime From { get; private set; }
+        public DateTime? From { get; set; }
 
         /// <summary>
         /// Date to you what to fetch reported time.
@@ -26,7 +20,7 @@ namespace Everhour.Net.Models
         /// 2018-01-31
         /// </example>
         /// </summary>
-        public DateTime To { get; private set; }
+        public DateTime? To { get; set; }
 
         /// <summary>
         /// Comma separated objects to group by and fetch (allowed: user, project, task and date).
@@ -39,8 +33,8 @@ namespace Everhour.Net.Models
         public override string ToQuery() 
         {
             var query = HttpUtility.ParseQueryString(string.Empty);
-            query["from"] = From.ToString("yyyy-MM-dd");
-            query["to"] = To.ToString("yyyy-MM-dd");
+            if (From.HasValue) query["from"] = From.Value.ToString("yyyy-MM-dd");
+            if (To.HasValue) query["to"] = To.Value.ToString("yyyy-MM-dd");
             if (Fields.HasValue) {
                 var fields = new List<string>();
                 if ((Fields & ExportAllTeamTimeField.DATE) == ExportAllTeamTimeField.DATE) fields.Add(ExportAllTeamTimeField.DATE.ToLower());

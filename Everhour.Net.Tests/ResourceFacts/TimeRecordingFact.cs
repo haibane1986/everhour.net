@@ -43,10 +43,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[0].Time);
             Assert.Equal(1543, res.TimeRecord.Task.Estimate.Users[1].Id);
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[1].Time);
-            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes.Client);
-            Assert.Equal("hight", res.TimeRecord.Task.Attributes.Priority);
-            Assert.Equal(42, res.TimeRecord.Task.Metrics.Efforts);
-            Assert.Equal(199, res.TimeRecord.Task.Metrics.Expenses);
+            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes[0].Client);
+            Assert.Equal("hight", res.TimeRecord.Task.Attributes[0].Priority);
+            Assert.Equal(42, res.TimeRecord.Task.Metrics[0].Efforts);
+            Assert.Equal(199, res.TimeRecord.Task.Metrics[0].Expenses);
             Assert.True(res.TimeRecord.IsLocked);
             Assert.True(res.TimeRecord.IsInvoiced);
             Assert.Equal("some notes", res.TimeRecord.Comment);
@@ -92,10 +92,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[0].Time);
             Assert.Equal(1543, res.TimeRecord.Task.Estimate.Users[1].Id);
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[1].Time);
-            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes.Client);
-            Assert.Equal("hight", res.TimeRecord.Task.Attributes.Priority);
-            Assert.Equal(42, res.TimeRecord.Task.Metrics.Efforts);
-            Assert.Equal(199, res.TimeRecord.Task.Metrics.Expenses);
+            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes[0].Client);
+            Assert.Equal("hight", res.TimeRecord.Task.Attributes[0].Priority);
+            Assert.Equal(42, res.TimeRecord.Task.Metrics[0].Efforts);
+            Assert.Equal(199, res.TimeRecord.Task.Metrics[0].Expenses);
             Assert.True(res.TimeRecord.IsLocked);
             Assert.True(res.TimeRecord.IsInvoiced);
             Assert.Equal("some notes", res.TimeRecord.Comment);
@@ -133,10 +133,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[0].Time);
             Assert.Equal(1543, res.TimeRecord.Task.Estimate.Users[1].Id);
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[1].Time);
-            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes.Client);
-            Assert.Equal("hight", res.TimeRecord.Task.Attributes.Priority);
-            Assert.Equal(42, res.TimeRecord.Task.Metrics.Efforts);
-            Assert.Equal(199, res.TimeRecord.Task.Metrics.Expenses);
+            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes[0].Client);
+            Assert.Equal("hight", res.TimeRecord.Task.Attributes[0].Priority);
+            Assert.Equal(42, res.TimeRecord.Task.Metrics[0].Efforts);
+            Assert.Equal(199, res.TimeRecord.Task.Metrics[0].Expenses);
             Assert.True(res.TimeRecord.IsLocked);
             Assert.True(res.TimeRecord.IsInvoiced);
             Assert.Equal("some notes", res.TimeRecord.Comment);
@@ -182,10 +182,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[0].Time);
             Assert.Equal(1543, res.TimeRecord.Task.Estimate.Users[1].Id);
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[1].Time);
-            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes.Client);
-            Assert.Equal("hight", res.TimeRecord.Task.Attributes.Priority);
-            Assert.Equal(42, res.TimeRecord.Task.Metrics.Efforts);
-            Assert.Equal(199, res.TimeRecord.Task.Metrics.Expenses);
+            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes[0].Client);
+            Assert.Equal("hight", res.TimeRecord.Task.Attributes[0].Priority);
+            Assert.Equal(42, res.TimeRecord.Task.Metrics[0].Efforts);
+            Assert.Equal(199, res.TimeRecord.Task.Metrics[0].Expenses);
             Assert.True(res.TimeRecord.IsLocked);
             Assert.True(res.TimeRecord.IsInvoiced);
             Assert.Equal("some notes", res.TimeRecord.Comment);
@@ -223,10 +223,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[0].Time);
             Assert.Equal(1543, res.TimeRecord.Task.Estimate.Users[1].Id);
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[1].Time);
-            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes.Client);
-            Assert.Equal("hight", res.TimeRecord.Task.Attributes.Priority);
-            Assert.Equal(42, res.TimeRecord.Task.Metrics.Efforts);
-            Assert.Equal(199, res.TimeRecord.Task.Metrics.Expenses);
+            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes[0].Client);
+            Assert.Equal("hight", res.TimeRecord.Task.Attributes[0].Priority);
+            Assert.Equal(42, res.TimeRecord.Task.Metrics[0].Efforts);
+            Assert.Equal(199, res.TimeRecord.Task.Metrics[0].Expenses);
             Assert.True(res.TimeRecord.IsLocked);
             Assert.True(res.TimeRecord.IsInvoiced);
             Assert.Equal("some notes", res.TimeRecord.Comment);
@@ -271,10 +271,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[0].Time);
             Assert.Equal(1543, res.TimeRecord.Task.Estimate.Users[1].Id);
             Assert.Equal(3600, res.TimeRecord.Task.Estimate.Users[1].Time);
-            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes.Client);
-            Assert.Equal("hight", res.TimeRecord.Task.Attributes.Priority);
-            Assert.Equal(42, res.TimeRecord.Task.Metrics.Efforts);
-            Assert.Equal(199, res.TimeRecord.Task.Metrics.Expenses);
+            Assert.Equal("Everhour", res.TimeRecord.Task.Attributes[0].Client);
+            Assert.Equal("hight", res.TimeRecord.Task.Attributes[0].Priority);
+            Assert.Equal(42, res.TimeRecord.Task.Metrics[0].Efforts);
+            Assert.Equal(199, res.TimeRecord.Task.Metrics[0].Expenses);
             Assert.True(res.TimeRecord.IsLocked);
             Assert.True(res.TimeRecord.IsInvoiced);
             Assert.Equal("some notes", res.TimeRecord.Comment);
@@ -312,10 +312,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.All(res.TimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[0].Time));
             Assert.All(res.TimeRecords, t => Assert.Equal(1543, t.Task.Estimate.Users[1].Id));
             Assert.All(res.TimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[1].Time));
-            Assert.All(res.TimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes.Client));
-            Assert.All(res.TimeRecords, t => Assert.Equal("hight", t.Task.Attributes.Priority));
-            Assert.All(res.TimeRecords, t => Assert.Equal(42, t.Task.Metrics.Efforts));
-            Assert.All(res.TimeRecords, t => Assert.Equal(199, t.Task.Metrics.Expenses));
+            Assert.All(res.TimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes[0].Client));
+            Assert.All(res.TimeRecords, t => Assert.Equal("hight", t.Task.Attributes[0].Priority));
+            Assert.All(res.TimeRecords, t => Assert.Equal(42, t.Task.Metrics[0].Efforts));
+            Assert.All(res.TimeRecords, t => Assert.Equal(199, t.Task.Metrics[0].Expenses));
             Assert.All(res.TimeRecords, t => Assert.True(t.IsLocked));
             Assert.All(res.TimeRecords, t => Assert.True(t.IsInvoiced));
             Assert.All(res.TimeRecords, t => Assert.Equal("some notes", t.Comment));
@@ -360,10 +360,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.All(res.TimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[0].Time));
             Assert.All(res.TimeRecords, t => Assert.Equal(1543, t.Task.Estimate.Users[1].Id));
             Assert.All(res.TimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[1].Time));
-            Assert.All(res.TimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes.Client));
-            Assert.All(res.TimeRecords, t => Assert.Equal("hight", t.Task.Attributes.Priority));
-            Assert.All(res.TimeRecords, t => Assert.Equal(42, t.Task.Metrics.Efforts));
-            Assert.All(res.TimeRecords, t => Assert.Equal(199, t.Task.Metrics.Expenses));
+            Assert.All(res.TimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes[0].Client));
+            Assert.All(res.TimeRecords, t => Assert.Equal("hight", t.Task.Attributes[0].Priority));
+            Assert.All(res.TimeRecords, t => Assert.Equal(42, t.Task.Metrics[0].Efforts));
+            Assert.All(res.TimeRecords, t => Assert.Equal(199, t.Task.Metrics[0].Expenses));
             Assert.All(res.TimeRecords, t => Assert.True(t.IsLocked));
             Assert.All(res.TimeRecords, t => Assert.True(t.IsInvoiced));
             Assert.All(res.TimeRecords, t => Assert.Equal("some notes", t.Comment));
@@ -401,10 +401,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[0].Time));
             Assert.All(res.TeamTimeRecords, t => Assert.Equal(1543, t.Task.Estimate.Users[1].Id));
             Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[1].Time));
-            Assert.All(res.TeamTimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes.Client));
-            Assert.All(res.TeamTimeRecords, t => Assert.Equal("hight", t.Task.Attributes.Priority));
-            Assert.All(res.TeamTimeRecords, t => Assert.Equal(42, t.Task.Metrics.Efforts));
-            Assert.All(res.TeamTimeRecords, t => Assert.Equal(199, t.Task.Metrics.Expenses));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes[0].Client));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("hight", t.Task.Attributes[0].Priority));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(42, t.Task.Metrics[0].Efforts));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(199, t.Task.Metrics[0].Expenses));
             Assert.All(res.TeamTimeRecords, t => Assert.True(t.IsLocked));
             Assert.All(res.TeamTimeRecords, t => Assert.True(t.IsInvoiced));
             Assert.All(res.TeamTimeRecords, t => Assert.Equal("some notes", t.Comment));
@@ -417,18 +417,12 @@ namespace Everhour.Net.Tests.ResourceFacts
         }
 
         [Fact]
-        public async Task ListTeamTimeRecordsAsyncWithRequest_ReturnsTimeRecord()
+        public async Task ListTeamTimeRecordsAsyncWithSingleDate_ReturnsTimeRecord()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.LIST_TEAM_TIME_RECORDS)));
-            
-            var req = new Models.ListTeamTimeRecordsRequest()
-            {
-                From = DateTime.UtcNow,
-                To = DateTime.UtcNow,
-                Date = DateTime.UtcNow
-            };
-            var res = await MockApi.Object.ListTeamTimeRecordsAsync(req);
+
+            var res = await MockApi.Object.ListTeamTimeRecordsAsync(DateTime.UtcNow);
 
             Assert.NotNull(res);
             Assert.All(res.TeamTimeRecords, t => Assert.Equal(2660155, t.Id));
@@ -455,10 +449,58 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[0].Time));
             Assert.All(res.TeamTimeRecords, t => Assert.Equal(1543, t.Task.Estimate.Users[1].Id));
             Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[1].Time));
-            Assert.All(res.TeamTimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes.Client));
-            Assert.All(res.TeamTimeRecords, t => Assert.Equal("hight", t.Task.Attributes.Priority));
-            Assert.All(res.TeamTimeRecords, t => Assert.Equal(42, t.Task.Metrics.Efforts));
-            Assert.All(res.TeamTimeRecords, t => Assert.Equal(199, t.Task.Metrics.Expenses));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes[0].Client));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("hight", t.Task.Attributes[0].Priority));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(42, t.Task.Metrics[0].Efforts));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(199, t.Task.Metrics[0].Expenses));
+            Assert.All(res.TeamTimeRecords, t => Assert.True(t.IsLocked));
+            Assert.All(res.TeamTimeRecords, t => Assert.True(t.IsInvoiced));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("some notes", t.Comment));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(4622379, t.History[0].Id));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(1304, t.History[0].CreatedBy));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.History[0].Time));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(0, t.History[0].PreviousTime));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(Models.HistoryStatus.TIMER, t.History[0].Status));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(new DateTime(2018, 1, 16, 12, 42, 59), t.History[0].CreatedAt));
+        }
+
+        [Fact]
+        public async Task ListTeamTimeRecordsAsyncWithFromTo_ReturnsTimeRecord()
+        {
+            MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
+                .Returns(Task.FromResult(GenerateMockResponse(Specification.LIST_TEAM_TIME_RECORDS)));
+
+            var res = await MockApi.Object.ListTeamTimeRecordsAsync(DateTime.UtcNow, DateTime.UtcNow);
+
+            Assert.NotNull(res);
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(2660155, t.Id));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Time));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(1304, t.User));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(new DateTime(2018, 1, 20), t.Date));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("ev:9876543210", t.Task.Id));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("Task Name", t.Task.Name));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(new List<string>() { "ev:1234567890" }, t.Task.Projects));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(1234, t.Task.Section));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(new List<string>() { "high", "bug" },  t.Task.Labels));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(1, t.Task.Position));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("description", t.Task.Description));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(new DateTime(2018, 3, 5, 16, 0, 0), t.Task.DueAt));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(Models.TaskStatus.OPEN, t.Task.Status));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(7200, t.Task.Time.Total));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(1304, t.Task.Time.Users[0].Id));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Task.Time.Users[0].Time));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(1543, t.Task.Time.Users[1].Id));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Task.Time.Users[1].Time));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(7200, t.Task.Estimate.Total));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(Models.EstimateType.OVERALL, t.Task.Estimate.Type));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(1304, t.Task.Estimate.Users[0].Id));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[0].Time));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(1543, t.Task.Estimate.Users[1].Id));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[1].Time));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes[0].Client));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal("hight", t.Task.Attributes[0].Priority));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(42, t.Task.Metrics[0].Efforts));
+            Assert.All(res.TeamTimeRecords, t => Assert.Equal(199, t.Task.Metrics[0].Expenses));
             Assert.All(res.TeamTimeRecords, t => Assert.True(t.IsLocked));
             Assert.All(res.TeamTimeRecords, t => Assert.True(t.IsInvoiced));
             Assert.All(res.TeamTimeRecords, t => Assert.Equal("some notes", t.Comment));
@@ -502,10 +544,10 @@ namespace Everhour.Net.Tests.ResourceFacts
             Assert.All(res.TimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[0].Time));
             Assert.All(res.TimeRecords, t => Assert.Equal(1543, t.Task.Estimate.Users[1].Id));
             Assert.All(res.TimeRecords, t => Assert.Equal(3600, t.Task.Estimate.Users[1].Time));
-            Assert.All(res.TimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes.Client));
-            Assert.All(res.TimeRecords, t => Assert.Equal("hight", t.Task.Attributes.Priority));
-            Assert.All(res.TimeRecords, t => Assert.Equal(42, t.Task.Metrics.Efforts));
-            Assert.All(res.TimeRecords, t => Assert.Equal(199, t.Task.Metrics.Expenses));
+            Assert.All(res.TimeRecords, t => Assert.Equal("Everhour", t.Task.Attributes[0].Client));
+            Assert.All(res.TimeRecords, t => Assert.Equal("hight", t.Task.Attributes[0].Priority));
+            Assert.All(res.TimeRecords, t => Assert.Equal(42, t.Task.Metrics[0].Efforts));
+            Assert.All(res.TimeRecords, t => Assert.Equal(199, t.Task.Metrics[0].Expenses));
             Assert.All(res.TimeRecords, t => Assert.True(t.IsLocked));
             Assert.All(res.TimeRecords, t => Assert.True(t.IsInvoiced));
             Assert.All(res.TimeRecords, t => Assert.Equal("some notes", t.Comment));

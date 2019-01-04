@@ -11,12 +11,12 @@ namespace Everhour.Net.Tests.ResourceFacts
     public class EstimateFact : FactBase
     {
         [Fact]
-        public async Task ExportTeamEstimatesAsync_ReturnsTeamEstimates()
+        public async Task ExportAllTeamEstimatesAsync_ReturnsTeamEstimates()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.EXPORT_ESITIMATES)));
 
-            var res = await MockApi.Object.ExportAllTeamEstimatesAsync(DateTime.UtcNow, DateTime.UtcNow.AddDays(1));
+            var res = await MockApi.Object.ExportAllTeamEstimatesAsync();
 
             Assert.NotNull(res);
             Assert.All(res.TeamEstimates, e => Assert.NotEqual(default(int), e.Time.Total));
@@ -31,7 +31,7 @@ namespace Everhour.Net.Tests.ResourceFacts
         }
 
         [Fact]
-        public async Task ExportTeamEstimatesAsyncWithParams_ReturnsTeamEstimates()
+        public async Task ExportAllTeamEstimatesAsyncWithParams_ReturnsTeamEstimates()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
@@ -39,8 +39,10 @@ namespace Everhour.Net.Tests.ResourceFacts
                     Content = new StringContent(Specification.EXPORT_ESITIMATES)
                 }));
             
-            var req = new Models.ExportAllTeamEstimatesRequest(DateTime.UtcNow, DateTime.UtcNow.AddDays(1))
+            var req = new Models.ExportAllTeamEstimatesRequest()
             {
+                DueFrom = DateTime.UtcNow, 
+                DueTo = DateTime.UtcNow.AddDays(1),
                 Status = Models.TaskStatus.OPEN
             };
             var res = await MockApi.Object.ExportAllTeamEstimatesAsync(req);

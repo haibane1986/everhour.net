@@ -50,6 +50,8 @@ namespace Everhour.Net.Models
         /// 2018-01-16 12:42:59
         /// </example>
         /// </summary>
-        public DateTime CreatedAt { get; set; }
+        public DateTime? CreatedAt { get; set; }
+
+        public string Action { get; set; }
     }
 }

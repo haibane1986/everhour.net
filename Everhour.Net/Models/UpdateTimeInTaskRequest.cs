@@ -26,6 +26,7 @@ namespace Everhour.Net.Models
         /// 2018-01-20
         /// </example>
         /// </summary>
+        [JsonConverter(typeof(DateConverter))]
         [JsonProperty("date", Required = Required.Always)]
         public DateTime Date { get; set; }
 
@@ -36,6 +37,6 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         [JsonProperty("user")]
-        public int User { get; set; }
+        public int? User { get; set; }
     }
 }

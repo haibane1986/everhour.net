@@ -1,10 +1,7 @@
 using System;
-using System.Collections.Generic;
 
-namespace Everhour.Net.Models
-{
-    public class TeamTimeRecord
-    {
+namespace Everhour.Net.Models {
+    public class TaskTime {
         /// <summary>
         /// Time record ID.
         /// <example>
@@ -60,12 +57,6 @@ namespace Everhour.Net.Models
         /// </summary>
         public string Comment { get; set; }
 
-
-        /// <summary>
-        /// <example>
-        /// some notes
-        /// </example>
-        /// </summary>
-        public IList<History> History { get; set; }
+        public History LastHistory { get; set; }
     }
 }

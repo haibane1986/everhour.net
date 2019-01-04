@@ -19,7 +19,7 @@ namespace Everhour.Net.Models
         /// 16
         /// </example>
         /// </summary>
-        public int Duration { get; set; }
+        public int? Duration { get; set; }
 
         /// <summary>
         /// Today time by user in the timer task.
@@ -27,21 +27,21 @@ namespace Everhour.Net.Models
         /// 7200
         /// </example>
         /// </summary>
-        public int Today { get; set; }
+        public int? Today { get; set; }
 
         /// <summary>
         /// <example>
         /// 2018-01-16 12:42:59
         /// </example>
         /// </summary>
-        public DateTime StartedAt { get; set; }
+        public DateTime? StartedAt { get; set; }
 
         /// <summary>
         /// <example>
         /// 2018-01-16
         /// </example>
         /// </summary>
-        public DateTime UserDate { get; set; }
+        public DateTime? UserDate { get; set; }
 
         /// <summary>
         /// <example>
@@ -60,5 +60,7 @@ namespace Everhour.Net.Models
         /// </example>
         /// </summary>
         public User User { get; set; }
+
+        public TaskTime TaskTime { get; set; }
     }
 }

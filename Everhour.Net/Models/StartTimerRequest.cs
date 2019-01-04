@@ -18,8 +18,9 @@ namespace Everhour.Net.Models
         /// 2018-01-16
         /// </example>
         /// </summary>
+        [JsonConverter(typeof(DateConverter))]
         [JsonProperty("userDate")]
-        public DateTime UserDate { get; set; }
+        public DateTime? UserDate { get; set; }
 
         /// <summary>
         /// <example>

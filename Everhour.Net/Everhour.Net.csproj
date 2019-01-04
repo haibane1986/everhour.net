@@ -3,13 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <PackageId>Everhour.Net</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>haibane1986</Authors>
     <Description>Everhour API wrapper in .NET Core.</Description>
     <Copyright>© 2018 haibane1986.</Copyright>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/haibane1986/everhour.net</PackageProjectUrl>
-    <PackageReleaseNotes>First release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Fix bugs.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

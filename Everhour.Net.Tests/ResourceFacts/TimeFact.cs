@@ -11,7 +11,7 @@ namespace Everhour.Net.Tests.ResourceFacts
     public class Time : FactBase
     {
         [Fact]
-        public async Task ExportTeamTimeAsync_ReturnsTeamTime()
+        public async Task ExportAllTeamTimeAsync_ReturnsTeamTime()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.EXPORT_TIME)));
@@ -36,10 +36,10 @@ namespace Everhour.Net.Tests.ResourceFacts
              MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
                 .Returns(Task.FromResult(GenerateMockResponse(Specification.EXPORT_TIME)));
 
-            var req = new Models.ExportAllTeamTimeRequest(
-                DateTime.UtcNow, 
-                DateTime.UtcNow.AddDays(1))
+            var req = new Models.ExportAllTeamTimeRequest
             {
+                From = DateTime.UtcNow, 
+                To = DateTime.UtcNow.AddDays(1),
                 Fields = Models.ExportAllTeamTimeField.PROJECT 
                 | Models.ExportAllTeamTimeField.TASK
                 | Models.ExportAllTeamTimeField.DATE

@@ -91,29 +91,6 @@ namespace Everhour.Net.Tests.ResourceFacts
         }
 
         [Fact]
-        public async Task UpdateSectionAsyncWithRequest_ReturnsSection()
-        {
-            MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
-                .Returns(Task.FromResult(GenerateMockResponse(Specification.UPDATE_SECTION)));
-            
-            var req = new Models.UpdateSectionRequest()
-            {
-                Id = 1234,
-                Name = "Test Section",
-                Position = 1,
-                Status = Models.SectionStatus.OPEN
-            };
-            var res = await MockApi.Object.UpdateSectionAsync(req);
-
-            Assert.NotNull(res);
-            Assert.NotEqual(default(int), res.Section.Id);
-            Assert.NotNull(res.Section.Name);
-            Assert.NotEqual(default(int), res.Section.Position);
-            Assert.NotNull(res.Section.Project);
-            Assert.Equal(Models.SectionStatus.OPEN, res.Section.Status);
-        }
-
-        [Fact]
         public async Task DeleteSectionAsync_ReturnsSection()
         {
             MockApi.Setup(x => x.ExecuteAsync(It.IsAny<HttpRequestMessage>()))
