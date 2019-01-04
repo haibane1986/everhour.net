@@ -5,6 +5,7 @@ namespace Everhour.Net.Models
 {
     public class ProjectWithAttributes: Project
     {
+        [JsonProperty("workspaceName")]
         private string WorkspaceName { set { Workspace = value; } }
 
         /// <summary>
