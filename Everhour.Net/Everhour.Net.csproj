@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <PackageId>Everhour.Net</PackageId>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <Authors>haibane1986</Authors>
     <Description>Everhour API wrapper in .NET Core.</Description>
     <Copyright>© 2018 haibane1986.</Copyright>
